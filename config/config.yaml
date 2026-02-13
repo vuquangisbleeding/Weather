@@ -1,0 +1,44 @@
+# Weather Analysis Configuration
+
+# Data paths
+data:
+  input_file: "data/weather_data.csv"
+  date_column: "date"
+
+# Analysis parameters
+analysis:
+  # Seasonal months definition
+  summer_months: [6, 7, 8]  # June, July, August
+  winter_months: [12, 1, 2]  # December, January, February
+
+  # Statistical parameters
+  confidence_level: 0.95
+  significance_level: 0.05
+
+  # Prediction
+  prediction_year: 2030
+
+  # Bootstrap resampling
+  bootstrap:
+    enabled: true              # Enable bootstrap analysis
+    n_iterations: 10000        # Number of bootstrap iterations (more = slower but more accurate)
+    random_seed: 42            # For reproducibility (null for random)
+    compare_methods: true      # Compare bootstrap vs parametric methods
+
+# Output settings
+output:
+  plots_dir: "outputs/plots"
+  reports_dir: "outputs/reports"
+  save_plots: true
+  show_plots: false  # Set to true to display plots interactively
+  plot_format: "png"
+  plot_dpi: 300
+  figure_size:
+    width: 10
+    height: 6
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: "logs/weather_analysis.log"
+  console_output: true

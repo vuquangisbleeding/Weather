@@ -1,0 +1,310 @@
+2026-02-13 11:20:28,369 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:28,369 - utils.config_loader - INFO - Starting Weather Trend Analysis
+2026-02-13 11:20:28,369 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:28,369 - data.data_loader - INFO - Loading data from data/weather_data.csv
+2026-02-13 11:20:28,369 - data.data_loader - INFO - Data loaded successfully. Shape: (1826, 4)
+2026-02-13 11:20:28,369 - data.data_loader - INFO - Cleaning data...
+2026-02-13 11:20:28,385 - data.data_loader - INFO - Removed 0 rows with missing values. Remaining: 1826 rows
+2026-02-13 11:20:28,385 - data.data_loader - INFO - Adding temporal features (year, month)...
+2026-02-13 11:20:28,385 - data.data_loader - INFO - Data spans years: 2019 - 2023
+2026-02-13 11:20:28,385 - data.data_loader - INFO - Data preparation completed successfully
+2026-02-13 11:20:28,385 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:20:28,385 - utils.config_loader - INFO - SUMMER TEMPERATURE TREND ANALYSIS
+2026-02-13 11:20:28,385 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'temp_celsius': 5 years
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Temp
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Summer Temp regression: y = -0.179x + 391.76
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Slope: -0.179 per year (95% CI: -0.503 to 0.145)
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Intercept: 391.76 (95% CI: -263.22 to 1046.73)
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.71
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - P-value = 0.1764
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.179x + 391.76
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.179 per year
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [scipy] Intercept: 391.76
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [scipy] r = -0.71
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.1764
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [poly2] regression: y = -0.02034x^2 + 82.041x + -82692.33
+2026-02-13 11:20:28,385 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.517
+2026-02-13 11:20:28,385 - visualization.trend_plotter - INFO - Creating plots for Summer Temp
+2026-02-13 11:20:28,890 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_temp_trend.png
+2026-02-13 11:20:29,178 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_temp_residuals.png
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Predicted value for year 2030: 27.68
+2026-02-13 11:20:29,194 - utils.config_loader - INFO - Predicted summer avg temp in 2030: 27.68°C
+2026-02-13 11:20:29,194 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:20:29,194 - utils.config_loader - INFO - WINTER TEMPERATURE TREND ANALYSIS
+2026-02-13 11:20:29,194 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [12, 1, 2], metric 'temp_celsius': 5 years
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Analyzing trend for: Winter Temp
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Winter Temp regression: y = -0.298x + 620.24
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Slope: -0.298 per year (95% CI: -1.323 to 0.727)
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Intercept: 620.24 (95% CI: -1450.49 to 2690.97)
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.47
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - P-value = 0.4229
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.298x + 620.24
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.298 per year
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - [scipy] Intercept: 620.24
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - [scipy] r = -0.47
+2026-02-13 11:20:29,194 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.4229
+2026-02-13 11:20:29,209 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.31013x^2 + -1253.833x + 1267316.42
+2026-02-13 11:20:29,209 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.559
+2026-02-13 11:20:29,209 - visualization.trend_plotter - INFO - Creating plots for Winter Temp
+2026-02-13 11:20:29,592 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\winter_temp_trend.png
+2026-02-13 11:20:31,154 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\winter_temp_residuals.png
+2026-02-13 11:20:31,173 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:20:31,173 - utils.config_loader - INFO - SUMMER RAINFALL TREND ANALYSIS
+2026-02-13 11:20:31,174 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:31,178 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'rainfall_mm': 5 years
+2026-02-13 11:20:31,179 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Rainfall
+2026-02-13 11:20:31,179 - analysis.trend_analyzer - INFO - Summer Rainfall regression: y = 0.118x + -228.64
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - Slope: 0.118 per year (95% CI: -1.734 to 1.970)
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - Intercept: -228.64 (95% CI: -3972.25 to 3514.96)
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - Correlation coefficient r = 0.12
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - P-value = 0.8523
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - [scipy] regression: y = 0.118x + -228.64
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - [scipy] Slope: 0.118 per year
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - [scipy] Intercept: -228.64
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - [scipy] r = 0.12
+2026-02-13 11:20:31,180 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.8523
+2026-02-13 11:20:31,182 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.51087x^2 + -2064.817x + 2086386.93
+2026-02-13 11:20:31,183 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.368
+2026-02-13 11:20:31,183 - visualization.trend_plotter - INFO - Creating plots for Summer Rainfall
+2026-02-13 11:20:31,618 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_rainfall_trend.png
+2026-02-13 11:20:31,953 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_rainfall_residuals.png
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - SUMMARY AND CONCLUSIONS
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Summers warming: -1.79°C per decade.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Winters warming: -2.98°C per decade.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Summer rainfall trend: 0.12 mm/year.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Summer temperature trend is NOT statistically significant.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Winter temperature trend is NOT statistically significant.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Rainfall trend is NOT statistically significant.
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - Weather Trend Analysis Completed Successfully
+2026-02-13 11:20:31,953 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:47,634 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:47,634 - utils.config_loader - INFO - Starting Weather Trend Analysis WITH BOOTSTRAP RESAMPLING
+2026-02-13 11:35:47,634 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:47,634 - data.data_loader - INFO - Loading data from data/weather_data.csv
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Data loaded successfully. Shape: (1826, 4)
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Cleaning data...
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Removed 0 rows with missing values. Remaining: 1826 rows
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Adding temporal features (year, month)...
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Data spans years: 2019 - 2023
+2026-02-13 11:35:47,650 - data.data_loader - INFO - Data preparation completed successfully
+2026-02-13 11:35:47,650 - utils.config_loader - INFO - Bootstrap enabled with 10000 iterations
+2026-02-13 11:35:47,650 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:35:47,650 - utils.config_loader - INFO - SUMMER TEMPERATURE TREND ANALYSIS
+2026-02-13 11:35:47,650 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'temp_celsius': 5 years
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Temp
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Summer Temp regression: y = -0.179x + 391.76
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Slope: -0.179 per year (95% CI: -0.503 to 0.145)
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Intercept: 391.76 (95% CI: -263.22 to 1046.73)
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.71
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - P-value = 0.1764
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.179x + 391.76
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.179 per year
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [scipy] Intercept: 391.76
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [scipy] r = -0.71
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.1764
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [poly2] regression: y = -0.02034x^2 + 82.041x + -82692.33
+2026-02-13 11:35:47,650 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.517
+2026-02-13 11:35:47,650 - visualization.trend_plotter - INFO - Creating plots for Summer Temp
+2026-02-13 11:35:48,054 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_temp_trend.png
+2026-02-13 11:35:48,358 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_temp_residuals.png
+2026-02-13 11:35:48,358 - utils.config_loader - INFO - 
+--- Bootstrap Analysis for Summer Temperature ---
+2026-02-13 11:35:48,358 - analysis.bootstrap - INFO - Starting bootstrap with 10000 iterations...
+2026-02-13 11:35:48,680 - analysis.bootstrap - INFO - Bootstrap completed: slope = -0.194 (95% CI: -0.514 to 0.035)
+2026-02-13 11:35:49,022 - visualization.bootstrap_plotter - INFO - Saved bootstrap distribution plot: outputs/plots\bootstrap_summer_temperature_slope_slope.png
+2026-02-13 11:35:49,023 - utils.config_loader - INFO - 
+--- Bootstrap Prediction for 2030 ---
+2026-02-13 11:35:49,023 - analysis.bootstrap - INFO - Bootstrap prediction for year 2030...
+2026-02-13 11:35:49,339 - analysis.bootstrap - INFO - Prediction for 2030: 27.57 (95% CI: 24.43 to 29.93)
+2026-02-13 11:35:49,662 - visualization.bootstrap_plotter - INFO - Saved bootstrap prediction plot: outputs/plots\bootstrap_prediction_summer_temperature.png
+2026-02-13 11:35:49,675 - utils.config_loader - INFO - 
+--- Method Comparison: Parametric vs Bootstrap ---
+2026-02-13 11:35:49,675 - analysis.bootstrap - INFO - Starting bootstrap with 10000 iterations...
+2026-02-13 11:35:49,975 - analysis.bootstrap - INFO - Bootstrap completed: slope = -0.198 (95% CI: -0.540 to 0.035)
+2026-02-13 11:35:49,975 - analysis.bootstrap - INFO - === Method Comparison ===
+2026-02-13 11:35:49,975 - analysis.bootstrap - INFO - Parametric CI width: 0.648171
+2026-02-13 11:35:49,975 - analysis.bootstrap - INFO - Bootstrap CI width: 0.575136
+2026-02-13 11:35:49,975 - analysis.bootstrap - INFO - Ratio (Bootstrap/Parametric): 0.887
+2026-02-13 11:35:50,269 - visualization.bootstrap_plotter - INFO - Saved bootstrap comparison plot: outputs/plots\bootstrap_comparison_summer temp slope.png
+2026-02-13 11:35:50,763 - visualization.bootstrap_plotter - INFO - Saved bootstrap scatter plot: outputs/plots\bootstrap_scatter_summer_temperature_slope.png
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Predicted value for year 2030: 27.68
+2026-02-13 11:35:50,778 - utils.config_loader - INFO - 
+Parametric prediction for 2030: 27.68°C
+2026-02-13 11:35:50,778 - utils.config_loader - INFO - Bootstrap prediction for 2030: 27.57°C (95% CI: 24.43 to 29.93°C)
+2026-02-13 11:35:50,778 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:35:50,778 - utils.config_loader - INFO - WINTER TEMPERATURE TREND ANALYSIS
+2026-02-13 11:35:50,778 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [12, 1, 2], metric 'temp_celsius': 5 years
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Analyzing trend for: Winter Temp
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Winter Temp regression: y = -0.298x + 620.24
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Slope: -0.298 per year (95% CI: -1.323 to 0.727)
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Intercept: 620.24 (95% CI: -1450.49 to 2690.97)
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.47
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - P-value = 0.4229
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.298x + 620.24
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.298 per year
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [scipy] Intercept: 620.24
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [scipy] r = -0.47
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.4229
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.31013x^2 + -1253.833x + 1267316.42
+2026-02-13 11:35:50,778 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.559
+2026-02-13 11:35:50,778 - visualization.trend_plotter - INFO - Creating plots for Winter Temp
+2026-02-13 11:35:51,111 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\winter_temp_trend.png
+2026-02-13 11:35:51,388 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\winter_temp_residuals.png
+2026-02-13 11:35:51,388 - utils.config_loader - INFO - 
+--- Bootstrap Analysis for Winter Temperature ---
+2026-02-13 11:35:51,388 - analysis.bootstrap - INFO - Starting bootstrap with 10000 iterations...
+2026-02-13 11:35:51,704 - analysis.bootstrap - INFO - Bootstrap completed: slope = -0.329 (95% CI: -1.011 to 0.297)
+2026-02-13 11:35:52,084 - visualization.bootstrap_plotter - INFO - Saved bootstrap distribution plot: outputs/plots\bootstrap_winter_temperature_slope_slope.png
+2026-02-13 11:35:52,084 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:35:52,084 - utils.config_loader - INFO - SUMMER RAINFALL TREND ANALYSIS
+2026-02-13 11:35:52,084 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'rainfall_mm': 5 years
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Rainfall
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Summer Rainfall regression: y = 0.118x + -228.64
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Slope: 0.118 per year (95% CI: -1.734 to 1.970)
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Intercept: -228.64 (95% CI: -3972.25 to 3514.96)
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - Correlation coefficient r = 0.12
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - P-value = 0.8523
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [scipy] regression: y = 0.118x + -228.64
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [scipy] Slope: 0.118 per year
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [scipy] Intercept: -228.64
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [scipy] r = 0.12
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.8523
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.51087x^2 + -2064.817x + 2086386.93
+2026-02-13 11:35:52,099 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.368
+2026-02-13 11:35:52,099 - visualization.trend_plotter - INFO - Creating plots for Summer Rainfall
+2026-02-13 11:35:52,557 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_rainfall_trend.png
+2026-02-13 11:35:52,845 - visualization.trend_plotter - INFO - Saved plot: outputs/plots\summer_rainfall_residuals.png
+2026-02-13 11:35:52,851 - utils.config_loader - INFO - 
+--- Bootstrap Analysis for Summer Rainfall ---
+2026-02-13 11:35:52,851 - analysis.bootstrap - INFO - Starting bootstrap with 10000 iterations...
+2026-02-13 11:35:53,168 - analysis.bootstrap - INFO - Bootstrap completed: slope = 0.189 (95% CI: -1.778 to 1.700)
+2026-02-13 11:35:53,552 - visualization.bootstrap_plotter - INFO - Saved bootstrap distribution plot: outputs/plots\bootstrap_summer_rainfall_slope_slope.png
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - SUMMARY AND CONCLUSIONS
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - ================================================================================
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Summers warming: -1.79°C per decade.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Winters warming: -2.98°C per decade.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Summer rainfall trend: 0.12 mm/year.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - 
+--- Bootstrap Estimates ---
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Summer warming (bootstrap): -1.94°C per decade
+2026-02-13 11:35:53,552 - utils.config_loader - INFO -   95% CI: [-5.14, 0.35]°C per decade
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Winter warming (bootstrap): -3.29°C per decade
+2026-02-13 11:35:53,552 - utils.config_loader - INFO -   95% CI: [-10.11, 2.97]°C per decade
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Rainfall trend (bootstrap): 0.19 mm/year
+2026-02-13 11:35:53,552 - utils.config_loader - INFO -   95% CI: [-1.78, 1.70] mm/year
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - 
+Summer temperature trend is NOT statistically significant.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Winter temperature trend is NOT statistically significant.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Rainfall trend is NOT statistically significant.
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Weather Trend Analysis Completed Successfully
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - Bootstrap analysis performed with 10000 iterations
+2026-02-13 11:35:53,552 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:52,413 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:52,413 - utils.config_loader - INFO - Starting Weather Trend Analysis
+2026-02-13 04:51:52,414 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:52,414 - data.data_loader - INFO - Loading data from data/weather_data.csv
+2026-02-13 04:51:52,429 - data.data_loader - INFO - Data loaded successfully. Shape: (1826, 4)
+2026-02-13 04:51:52,429 - data.data_loader - INFO - Cleaning data...
+2026-02-13 04:51:52,431 - data.data_loader - INFO - Removed 0 rows with missing values. Remaining: 1826 rows
+2026-02-13 04:51:52,431 - data.data_loader - INFO - Adding temporal features (year, month)...
+2026-02-13 04:51:52,433 - data.data_loader - INFO - Data spans years: 2019 - 2023
+2026-02-13 04:51:52,433 - data.data_loader - INFO - Data preparation completed successfully
+2026-02-13 04:51:52,433 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 04:51:52,433 - utils.config_loader - INFO - SUMMER TEMPERATURE TREND ANALYSIS
+2026-02-13 04:51:52,433 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:52,437 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'temp_celsius': 5 years
+2026-02-13 04:51:52,437 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Temp
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - Summer Temp regression: y = -0.179x + 391.76
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - Slope: -0.179 per year (95% CI: -0.503 to 0.145)
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - Intercept: 391.76 (95% CI: -263.22 to 1046.73)
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.71
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - P-value = 0.1764
+2026-02-13 04:51:52,438 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.179x + 391.76
+2026-02-13 04:51:52,439 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.179 per year
+2026-02-13 04:51:52,439 - analysis.trend_analyzer - INFO - [scipy] Intercept: 391.76
+2026-02-13 04:51:52,439 - analysis.trend_analyzer - INFO - [scipy] r = -0.71
+2026-02-13 04:51:52,439 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.1764
+2026-02-13 04:51:52,440 - analysis.trend_analyzer - INFO - [poly2] regression: y = -0.02034x^2 + 82.041x + -82692.33
+2026-02-13 04:51:52,441 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.517
+2026-02-13 04:51:52,441 - visualization.trend_plotter - INFO - Creating plots for Summer Temp
+2026-02-13 04:51:53,315 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/summer_temp_trend.png
+2026-02-13 04:51:53,561 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/summer_temp_residuals.png
+2026-02-13 04:51:53,562 - analysis.trend_analyzer - INFO - Predicted value for year 2030: 27.68
+2026-02-13 04:51:53,562 - utils.config_loader - INFO - Predicted summer avg temp in 2030: 27.68°C
+2026-02-13 04:51:53,562 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 04:51:53,562 - utils.config_loader - INFO - WINTER TEMPERATURE TREND ANALYSIS
+2026-02-13 04:51:53,562 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [12, 1, 2], metric 'temp_celsius': 5 years
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Analyzing trend for: Winter Temp
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Winter Temp regression: y = -0.298x + 620.24
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Slope: -0.298 per year (95% CI: -1.323 to 0.727)
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Intercept: 620.24 (95% CI: -1450.49 to 2690.97)
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - Correlation coefficient r = -0.47
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - P-value = 0.4229
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [scipy] regression: y = -0.298x + 620.24
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [scipy] Slope: -0.298 per year
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [scipy] Intercept: 620.24
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [scipy] r = -0.47
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.4229
+2026-02-13 04:51:53,563 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.31013x^2 + -1253.833x + 1267316.42
+2026-02-13 04:51:53,564 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.559
+2026-02-13 04:51:53,564 - visualization.trend_plotter - INFO - Creating plots for Winter Temp
+2026-02-13 04:51:53,871 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/winter_temp_trend.png
+2026-02-13 04:51:54,108 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/winter_temp_residuals.png
+2026-02-13 04:51:54,108 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 04:51:54,108 - utils.config_loader - INFO - SUMMER RAINFALL TREND ANALYSIS
+2026-02-13 04:51:54,108 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Calculated seasonal average for months [6, 7, 8], metric 'rainfall_mm': 5 years
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Analyzing trend for: Summer Rainfall
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Summer Rainfall regression: y = 0.118x + -228.64
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Slope: 0.118 per year (95% CI: -1.734 to 1.970)
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Intercept: -228.64 (95% CI: -3972.25 to 3514.96)
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - Correlation coefficient r = 0.12
+2026-02-13 04:51:54,109 - analysis.trend_analyzer - INFO - P-value = 0.8523
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [scipy] regression: y = 0.118x + -228.64
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [scipy] Slope: 0.118 per year
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [scipy] Intercept: -228.64
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [scipy] r = 0.12
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [scipy] p-value = 0.8523
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [poly2] regression: y = 0.51087x^2 + -2064.817x + 2086386.93
+2026-02-13 04:51:54,110 - analysis.trend_analyzer - INFO - [poly2] R^2 = 0.368
+2026-02-13 04:51:54,110 - visualization.trend_plotter - INFO - Creating plots for Summer Rainfall
+2026-02-13 04:51:54,393 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/summer_rainfall_trend.png
+2026-02-13 04:51:54,639 - visualization.trend_plotter - INFO - Saved plot: outputs/plots/summer_rainfall_residuals.png
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - SUMMARY AND CONCLUSIONS
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - ================================================================================
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Summers warming: -1.79°C per decade.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Winters warming: -2.98°C per decade.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Summer rainfall trend: 0.12 mm/year.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Summer temperature trend is NOT statistically significant.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Winter temperature trend is NOT statistically significant.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Rainfall trend is NOT statistically significant.
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - 
+================================================================================
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - Weather Trend Analysis Completed Successfully
+2026-02-13 04:51:54,640 - utils.config_loader - INFO - ================================================================================
